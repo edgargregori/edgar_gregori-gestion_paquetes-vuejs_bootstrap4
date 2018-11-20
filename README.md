@@ -32,9 +32,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 
 # push an existing repository from the command line
-
+``` bash
 $ git remote add origin git@github.com:edgargregori/edgar_gregori-gestion_paquetes-vuejs_bootstrap4.git
 $ git push -u origin master
+```
 
 
 # "git commit --amend" 
@@ -42,7 +43,7 @@ $ git push -u origin master
 ``` bash
 $ git add .
 
-$ git commit --amend  # no guardar cambios en el editor de textos, es decir salirse sin modificar ni guardar.
+$ git commit --amend  --no-edit # no guardar cambios en el editor de textos, es decir salirse sin modificar ni guardar.
 
 $ git pull # traer los cambios de github para fusionar con la rama local. Hacer este paso alternativamente antes que "git commit --amend"
 
