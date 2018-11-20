@@ -27,3 +27,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 
 
+# push an existing repository from the command line
+
+$ git remote add origin git@github.com:edgargregori/edgar_gregori-gestion_paquetes-vuejs_bootstrap4.git
+$ git push -u origin master
