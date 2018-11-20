@@ -37,10 +37,14 @@ $ git remote add origin git@github.com:edgargregori/edgar_gregori-gestion_paquet
 $ git push -u origin master
 
 
-# "git commit --amend" lee permite combinar cambios preconfigurados con la confirmación anterior en lugar de crear una confirmación completamente nueva. Ej para la terminal.
+# "git commit --amend" 
+## lee permite combinar cambios preconfigurados con la confirmación anterior en lugar de crear una confirmación completamente nueva. Ej para la terminal.
 ``` bash
 $ git add .
 
 $ git commit --amend  # no guardar cambios en el editor de textos, es decir salirse sin modificar ni guardar.
-```
 
+$ git pull # traer los cambios de github para fusionar con la rama local. Hacer este paso alternativamente antes que "git commit --amend"
+
+$ git push -u origin master
+```
