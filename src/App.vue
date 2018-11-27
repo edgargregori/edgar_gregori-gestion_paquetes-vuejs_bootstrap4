@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-	<b-alert show> Hello {{ msg }}! </b-alert>
+	<b-alert show> Hola {{ msg }}! </b-alert>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -19,19 +19,22 @@
     </ul>
 
 	<Example />
+	<Sudoku />
   </div>
 </template>
 
 <script>
-import Example from './components/Example.vue';
+//import Example from './components/Example.vue';
+import Example from './components/Example/Example.vue';
+import Sudoku from './components/Sudoku/Sudoku.vue';
 export default {
   name: 'app',
   components: {
-	Example
+	Example, Sudoku
 	},
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Bienvenido a Vue.js App'
     }
   }
 }

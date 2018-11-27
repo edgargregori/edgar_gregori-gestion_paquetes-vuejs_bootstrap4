@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
-import App from './App.vue'
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap-vue/dist/bootstrap-vue.css"
+import Sudoku from './components/Sudoku/Sudoku.vue'
+//import App from './App.vue'
+//import "bootstrap/dist/css/bootstrap.min.css"
+//import "bootstrap-vue/dist/bootstrap-vue.css"
+//import "./src/components/Sudoku/boards.js"
 
-Vue.use(BootstrapVue)
+//Vue.use(BootstrapVue)
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+  el: '#sudoku',
+  render: h => h(Sudoku)
 })
+
+

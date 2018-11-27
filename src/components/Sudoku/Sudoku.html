@@ -1,0 +1,49 @@
+ <div id='sudoku'>
+<h1>
+	Sudoku.html
+</h1>
+<!--{{ game }} -->
+      <div class="dialog" v-if="game === null">
+        <p>Please, choose the difficulty:</p>
+        <p v-if="hasExistingGame()">
+          <button @click="continueGameClick">Continue existing game</button>
+        </p>
+        <button @click="difficultyClick" data-difficulty="easy">Easy</button>
+        <button @click="difficultyClick" data-difficulty="medium">Medium</button>
+        <button @click="difficultyClick" data-difficulty="hard">Hard</button>
+		
+	  </div>
+
+        <!-- <div v-else>
+	  	<li v-for="(irow, row) in game">
+	  	  <li v-for="(icell, cell) in row">
+	  	  		{{ icell}}
+			  <input>
+	  	  		{{ cell.value }}
+			  </input>
+	  		</li>
+	  	</li>
+		</div>--> 
+	
+	   <table class="sudoku-table" v-else>
+		   <!--<table v-else>-->
+        <tbody>
+          <tr v-for="(irow, row) in game">
+            <td v-for="(icell, cell) in irow"
+              :class="['i'+row, 'j'+cell, icell.editable ? 'editable': 'not-editable', icell.hasConflict ? 'has-conflict' : 'no-conflict']">
+				<input type="tel" :value="icell.value" :readonly="!icell.editable"
+                :data-i="row" :data-j="cell"
+                @click="cellClick"
+				@keyup="cellKeyUp" />
+            </td>
+          </tr>
+        </tbody>
+	  </table>
+
+	   <div class="controls" v-if="game !== null">
+        <p><a href="#" @click="backClick">Back</a></p>
+		<!-- <p>{{formatedTime()}}</p> -->
+		  <p>Computed reversed message: "{{ formatedTime }}"</p>
+	   </div>
+
+</div>
