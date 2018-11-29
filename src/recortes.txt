@@ -1,0 +1,28 @@
+		//formatedTime : function() {
+
+		//setInterval(function() {
+		//  if (this.time !== null) {
+		//    this.time++;
+		//    this.saveToLocalStorage();
+		//  }
+		//}, 1000);
+		//return this.time;
+		//}
+
+//const  moment = require('moment');
+//var v;
+
+		//var self = this;
+		//self.contarSegundos();
+    
+
+	  //tiempo: function () {
+	  //  var self = this;
+	  //    this.tiempoahora = moment().format();
+	  //    //setInterval(self.tiempo, 1000)
+	  //    setInterval(self.time, 1000)
+	  //},
+	  //iniciarContador : function() {
+	  //  var self = this;
+	  //    self.time = null;
+	  //},
