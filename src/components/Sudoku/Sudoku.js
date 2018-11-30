@@ -48,6 +48,9 @@ import { seleccionarplantilla } from './plantillas/seleccionarplantilla.js'
 
 export default  {
   name: 'sudoku',
+	components: {
+	//'input-component': inputComponent
+	},
 	mounted () {
 		console.log('sudoku vue.js');
 		this.contarSegundos();
