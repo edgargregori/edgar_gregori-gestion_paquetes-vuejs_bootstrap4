@@ -10,10 +10,10 @@ import Registro from './components/Registro/Registro.vue'
 //Vue.use(BootstrapVue)
 
 new Vue({
-  el: '#registro',
-  //el: '#sudoku',
-  //render: h => h(Sudoku)
-  render: h => h(Registro)
+  //el: '#registro',
+  el: '#sudoku',
+  render: h => h(Sudoku)
+  //render: h => h(Registro)
 })
 
 

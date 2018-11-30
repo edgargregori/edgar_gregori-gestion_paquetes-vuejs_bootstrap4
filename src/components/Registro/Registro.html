@@ -1,14 +1,27 @@
-  <div id="registro">
-    <div class="notes-section">
+  <div>
+   
+	<div class="notes-section">
       <div class="columns">
         <div class="column has-text-centered">
           <strong>Notes</strong>
+          <div v-for="note in notes" class="notes">
+            {{ note }}
+          </div>
         </div>
         <div class="column has-text-centered">
           <strong>Timestamp</strong>
+          <div v-for="timestamp in timestamps" class="timestamps">
+            {{ timestamp }}
+          </div>
         </div>
       </div>
-       <input-component  name='input'  :placeholder="placeholder"></input-component> 
+      <entrada
+        @add-note="addNote" :placeholder="placeholder"></entrada>
     </div>
+	<!-- 
+	<registro-componente>
+	</registro-componente>
+	-->
+
   </div>
 

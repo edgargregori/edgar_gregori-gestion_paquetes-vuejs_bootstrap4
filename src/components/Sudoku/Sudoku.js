@@ -45,11 +45,12 @@ console.log('sec' + sec);
 
 
 import { seleccionarplantilla } from './plantillas/seleccionarplantilla.js'
+import RegistroComponente from '../Registro/Registro.vue'
 
 export default  {
   name: 'sudoku',
 	components: {
-	//'input-component': inputComponent
+	'registro-componente': RegistroComponente
 	},
 	mounted () {
 		console.log('sudoku vue.js');
@@ -207,7 +208,9 @@ export default  {
       this.game = null;
       this.time = null;
     },
-    
+     formatedTime: function() {
+      return formatTimeFromSeconds(this.time);
+	}, 
     saveToLocalStorage: function() {
       localStorage.currentGame = JSON.stringify(this.game);
       localStorage.time = this.time;
