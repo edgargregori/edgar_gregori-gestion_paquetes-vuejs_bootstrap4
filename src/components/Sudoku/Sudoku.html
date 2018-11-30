@@ -42,8 +42,12 @@
 
 	   <div class="controls" v-if="game !== null">
         <p><a href="#" @click="backClick">Back</a></p>
-		<!-- <p>{{formatedTime()}}</p> -->
-		  <p>Computed reversed message: "{{ formatedTime }}"</p>
+
+		<span>
+			{{ datenow }}
+		</span>
+		<!-- <p>{{formatedTime()}}</p> --> 
+		 <!--  <p>Computed reversed message: "{{ formatedTime }}"</p>-->
 	   </div>
 
 </div>

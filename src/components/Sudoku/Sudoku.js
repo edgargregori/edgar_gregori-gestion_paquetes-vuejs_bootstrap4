@@ -44,11 +44,13 @@ function formatTimeFromSeconds(sec) {
 
 //import { board } from 'boards.js'
 var v;
+const moment = require('moment')
 export default v = {
   name: 'sudoku',
 	mounted () {
 		console.log('sudoku vue.js');
-		//game= 'easy';
+			//game= 'easy';
+		this.tiempo()
 	},
 	props: [
 		//'game', 'row', 'cell','irow', 'icell'
@@ -64,22 +66,21 @@ export default v = {
 			//row: '',
 			//cell: '',
 			//icell: '',
-			time: null
+			time: null,
+			datenow: ''
 		}
   },
 	computed: {
-		formatedTime : function() {
 
-		setInterval(function() {
-		  if (this.time !== null) {
-		    this.time++;
-		    this.saveToLocalStorage();
-		  }
-		}, 1000);
-		return this.time;
-		}
 	},
   methods: {
+    tiempo() {
+      var self = this
+      this.datenow = moment().format()
+
+      setInterval(self.tiempo, 1000)
+    },
+
     difficultyClick: function(event) {
       event.preventDefault();
 
@@ -208,9 +209,7 @@ export default v = {
       this.game = null;
       this.time = null;
     },
-    formatedTime: function() {
-      return formatTimeFromSeconds(this.time);
-    },
+    
     saveToLocalStorage: function() {
       localStorage.currentGame = JSON.stringify(this.game);
       localStorage.time = this.time;
