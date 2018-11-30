@@ -1,23 +1,10 @@
-const inputComponent = {
-  template: `<input
-        :placeholder="placeholder"
-        v-model="input"
-        @keyup.enter="monitorEnterKey"
-        class="input is-small" type="text" />`,
-  props: ['placeholder'],
-  data() {
-    return {
-      input: ''
-    }
-  }
-}
-
+import inputComponent  from './Input.vue';
 
 export default {
-  name: 'app',
+  name: 'registro',
   data() {
 	  return {
-		notes: [],
+	notes: [],
     	timestamps: [],
     	placeholder: 'Enter a note'
 	  }
@@ -25,4 +12,4 @@ export default {
   components: {
     'input-component': inputComponent
   }
-}
+};

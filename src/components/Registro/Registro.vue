@@ -1,4 +1,4 @@
-<template name="example" src="./Registro.html">
+<template name="registro" src="./Registro.html">
 
 </template>
 
