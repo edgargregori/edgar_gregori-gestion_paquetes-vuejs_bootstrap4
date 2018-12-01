@@ -21,9 +21,10 @@ export default {
   name: 'registro',
   data() {
 	  return {
-		notes: [],
+		usuarios: [],
     	timestamps: [],
-    	placeholder: 'Enter a note'
+    	placeholder: 'usuario / email',
+	      actual: ''
 	  }
   },
   created() {
@@ -31,8 +32,15 @@ export default {
   },
   methods: {
     addNote(event) {
-      this.notes.push(event.note);
+      this.usuarios.push(event.note);
       this.timestamps.push(event.timestamp);
+
+            //localStorage.currentGame = JSON.stringify(this.game);
+	    console.log('event note' + event.note );
+	    localStorage.actual = event.note;
+	    this.actual = localStorage.actual;
+	    console.log('storage user' + localStorage.user );
+
     }
   },
   components: {
